@@ -1,0 +1,156 @@
+html {
+    background-color: rgb(36, 34, 34);
+}
+/* Styles for the container */
+.container {
+    width: 50%;
+    height: auto;
+    margin: 2rem auto;
+}
+.card{
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+    color: black;
+    opacity: 86%;
+}
+
+.card > .card-header{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.card > .card-header > span > span:last-child{
+    color: #fff;
+    opacity: 60%;
+}
+
+.card > .card-header > .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    object-fit: cover;
+}
+
+.card-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-icons{
+    padding: 1.5rem;
+    line-height: 1.5rem;
+}
+/* Styles for the button */
+:root {
+    --red: rgb(209, 3, 3);
+    --white: rgb(182, 143, 143);
+    --black: #000;
+}
+.btn {
+    width: 25px; height: 88px;
+    outline: 0;
+    border: 2px solid #ccc;
+    color: #000;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+.btn:hover {
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--red);
+}
+.btn-like {
+    padding: 1.5rem 1.5rem 1.5rem 6rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    background: rgb(255, 243, 243);
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+.btn-like.liked {
+    background: var(--red);
+    border-color: var(--red);
+}
+.btn-icon {
+    display: inline-block;
+    width: 32px;
+    height: 36px;
+    position: absolute;
+    left: 1.5rem;
+    transition: 1s cubic-bezier(.21,.04,.26,.99);
+    transform: rotate(0deg)
+}
+.btn:hover .btn-icon {
+    color: var(--red);
+}
+.btn.liked:hover .btn-icon {
+    color: var(--black);
+}
+.liked .btn--icon-default {
+    transform: rotate(-90deg)
+}
+.btn:not(.liked).btn--icon-liked {
+    transform: rotate(-90deg)
+}
+.liked .btn--icon-default,
+.btn--icon-liked {
+    opacity: 0;
+    color: rgb(214, 0, 0);
+    position: absolute;
+}
+.btn--icon-default,
+.liked .btn--icon-liked {
+    opacity: 1;
+    left: 1.5rem;
+}
+.btn-content {
+    transition: transform 0.1s ease;
+    display: inline-block;
+}
+.liked .btn-content {
+    color: var(--white);
+}
+.btn:hover.liked .btn-content {
+    color: var(--black);
+}
+.btn:not(.liked) .btn-content--liked {
+    transform: translate(110px)
+}
+.btn:not(.liked) .btn-content--default {
+    transform: translate(-56px)
+}
+.liked .btn-content--default {
+    transform: translate(24px)
+}
+/* Styles for the navbar */
+
+.nav-container > .navbar {
+    max-width: 500px;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+  
+.nav-container {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(blue, white);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid white;
+    z-index: 999;
+    color: black;
+}
